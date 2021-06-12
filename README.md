@@ -4,3 +4,5 @@
 
 "tachyons"
 "react-tilt"
+"particles.js"
+"clarifai"
