@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 
 import Particles from "react-particles-js";
@@ -9,21 +10,16 @@ import Rank from "./components/Rank/Rank.js";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 20,
-      density: {
-        enable: true,
-        value_area: 1000,
-      },
-    },
-  },
-};
+import particlesOptions from "./components/ParticlesOptions/ParticlesOptions";
 
 const app = new Clarifai.App({
   apiKey: "dc2a8c7fd1ad4e088124cef04dd2a028",
 });
+
+const initialState = {
+  input: "",
+  imageUrl: "",
+};
 
 function App() {
   const onInputChange = (e) => {
