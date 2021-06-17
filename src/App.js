@@ -23,7 +23,6 @@ function App() {
   const [box, setBox] = useState({});
 
   const displayFaceBox = (box) => {
-    // console.log(box);
     setBox(box);
   };
 
