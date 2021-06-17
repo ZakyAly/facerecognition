@@ -9,6 +9,7 @@ import Logo from "./components/Logo/Logo";
 import Rank from "./components/Rank/Rank.js";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
+import CalculateFaceLocation from "./components/CalculateFaceLocation/CalculateFaceLocation";
 
 import particlesOptions from "./components/ParticlesOptions/ParticlesOptions";
 
@@ -19,24 +20,25 @@ const app = new Clarifai.App({
 function App() {
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const [box, setBox] = useState({});
+
+  const displayFaceBox = (box) => {
+    // console.log(box);
+    setBox(box);
+  };
 
   const onInputChange = (event) => {
     setInput(event.target.value);
+
+    //Todo make setImageUrl working onButtonSubmit
     setImageUrl(event.target.value);
   };
 
-  const onButtonSubmit = (event) => {
-    app.models.predict(Clarifai.FACE_DETECT_MODEL, input).then(
-      function (response) {
-        console.log(
-          response.outputs[0].data.regions[0].region_info.bounding_box
-        );
-      },
-
-      function (err) {
-        //
-      }
-    );
+  const onSubmit = () => {
+    app.models
+      .predict(Clarifai.FACE_DETECT_MODEL, input)
+      .then((response) => displayFaceBox(CalculateFaceLocation(response)))
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -45,8 +47,8 @@ function App() {
       <Navigation />
       <Logo />
       <Rank />
-      <ImageLinkForm onInputChange={onInputChange} onSubmit={onButtonSubmit} />
-      <FaceRecognition imageUrl={imageUrl} />
+      <ImageLinkForm onInputChange={onInputChange} onSubmit={onSubmit} />
+      <FaceRecognition imageUrl={imageUrl} box={box} />
     </div>
   );
 }
