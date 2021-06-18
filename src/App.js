@@ -10,12 +10,14 @@ import Rank from "./components/Rank/Rank.js";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import CalculateFaceLocation from "./components/CalculateFaceLocation/CalculateFaceLocation";
+import { apiKey } from "./constants";
 
 import particlesOptions from "./components/ParticlesOptions/ParticlesOptions";
 
-const app = new Clarifai.App({
-  apiKey: "dc2a8c7fd1ad4e088124cef04dd2a028",
-});
+const app = new Clarifai.App(
+  // {apiKey: "remove {apiKey} and your apiKey here " }
+  { apiKey }
+);
 
 function App() {
   const [input, setInput] = useState("");
