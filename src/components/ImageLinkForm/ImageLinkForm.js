@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@material-ui/core";
 
 const ImageLinkForm = ({ onInputChange, onSubmit }) => {
   return (
@@ -8,12 +9,15 @@ const ImageLinkForm = ({ onInputChange, onSubmit }) => {
       <div>
         <div className="pa4 br3 shadow-1 w-80 center">
           <input type="text" className=" w-80" onChange={onInputChange} />
-          <button
+          <Button onClick={onSubmit} variant="contained" color="primary">
+            Detect
+          </Button>
+          {/* <button
             className="pointer grow link dib white bg-light-purple"
             onClick={onSubmit}
           >
-            Recognize
-          </button>
+            Detect
+          </button> */}
         </div>
       </div>
     </div>
