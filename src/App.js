@@ -10,6 +10,7 @@ import Rank from "./components/Rank/Rank.js";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import CalculateFaceLocation from "./components/CalculateFaceLocation/CalculateFaceLocation";
+import SigninForm from "./components/SigninForm/SigninForm";
 import { apiKey } from "./constants";
 
 import particlesOptions from "./components/ParticlesOptions/ParticlesOptions";
@@ -50,6 +51,7 @@ function App() {
       <Rank />
       <ImageLinkForm onInputChange={onInputChange} onSubmit={onSubmit} />
       <FaceRecognition imageUrl={imageUrl} box={box} />
+      <SigninForm />
     </div>
   );
 }
