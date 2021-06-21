@@ -48,10 +48,10 @@ function App() {
       <Particles className="particles" params={particlesOptions} />
       <Navigation />
       <Logo />
+      <SigninForm />
       <Rank />
       <ImageLinkForm onInputChange={onInputChange} onSubmit={onSubmit} />
       <FaceRecognition imageUrl={imageUrl} box={box} />
-      <SigninForm />
     </div>
   );
 }
