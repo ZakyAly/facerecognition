@@ -42,7 +42,7 @@ const SigninForm = ({ onRouteChange }) => {
             onClick={() => onRouteChange("register")}
             className="f6 link dim black db pointer"
           >
-            create account
+            Register
           </p>
         </div>
       </main>
