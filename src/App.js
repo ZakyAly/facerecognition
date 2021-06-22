@@ -4,11 +4,11 @@ import particlesOptions from "./components/ParticlesOptions/ParticlesOptions";
 import Clarifai from "clarifai";
 import Navigation from "./components/Navigation/Navigation";
 import Logo from "./components/Logo/Logo";
+import SigninForm from "./components/SigninForm/SigninForm";
 import Rank from "./components/Rank/Rank.js";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import CalculateFaceLocation from "./components/CalculateFaceLocation/CalculateFaceLocation";
-import SigninForm from "./components/SigninForm/SigninForm";
 import { apiKey } from "./constants";
 import "./App.css";
 
