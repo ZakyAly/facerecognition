@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import "./App.css";
-
 import Particles from "react-particles-js";
+import particlesOptions from "./components/ParticlesOptions/ParticlesOptions";
 import Clarifai from "clarifai";
-
 import Navigation from "./components/Navigation/Navigation";
 import Logo from "./components/Logo/Logo";
 import Rank from "./components/Rank/Rank.js";
@@ -12,8 +10,7 @@ import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import CalculateFaceLocation from "./components/CalculateFaceLocation/CalculateFaceLocation";
 import SigninForm from "./components/SigninForm/SigninForm";
 import { apiKey } from "./constants";
-
-import particlesOptions from "./components/ParticlesOptions/ParticlesOptions";
+import "./App.css";
 
 const app = new Clarifai.App(
   // {apiKey: "remove {apiKey} and your apiKey here " }
