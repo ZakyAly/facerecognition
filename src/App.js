@@ -5,6 +5,7 @@ import Clarifai from "clarifai";
 import Navigation from "./components/Navigation/Navigation";
 import Logo from "./components/Logo/Logo";
 import SigninForm from "./components/SigninForm/SigninForm";
+import SignUpForm from "./components/SignupForm/SignUpForm";
 import Rank from "./components/Rank/Rank.js";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
